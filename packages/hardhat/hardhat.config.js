@@ -24,7 +24,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "localhost";
+const defaultNetwork = "scrollTestnet";
 
 function mnemonic() {
   try {
@@ -68,6 +68,12 @@ module.exports = {
 
       */
     },
+    scrollTestnet: {
+      url: "https://prealpha.scroll.io/l2" || "",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+    },
     mainnet: {
       url: "https://mainnet.infura.io/v3/460f40a260564ac4a4f4b3fffb032dad", // <---- YOUR INFURA ID! (or it won't work)
       //      url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXXXX/eth/mainnet", // <---- YOUR MORALIS ID! (not limited to infura)
@@ -83,14 +89,14 @@ module.exports = {
       },
     },
     gnosis: {
-      url: 'https://rpc.gnosischain.com/',
+      url: "https://rpc.gnosischain.com/",
       gasPrice: 1000000000,
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     chiado: {
-      url: 'https://rpc.chiadochain.net',
+      url: "https://rpc.chiadochain.net",
       gasPrice: 1000000000,
       accounts: {
         mnemonic: mnemonic(),
